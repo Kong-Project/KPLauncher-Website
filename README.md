@@ -53,12 +53,6 @@ Notes:
 - Other hosts: Build with `pnpm build` and run `pnpm start` behind a Node process manager.
 - Static alternative: Serve the `website/` directory on any static host.
 
-### GitHub recommendations
-- Repository: keep `main` protected; require PR reviews and CI to pass.
-- CI: add a simple workflow to install, build, and type-check on PRs.
-- Releases: use GitHub Releases for versioned deploy notes.
-- Issues/PRs: add templates and use labels (bug, enhancement, design, docs).
-
 ### License
 This project is released under the MIT License. See `LICENSE` for details.
 
