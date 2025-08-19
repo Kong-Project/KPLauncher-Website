@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPLauncher - SAMP Launcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        :root {
+            --blue-400: #60a5fa;
+            --cyan-400: #22d3ee;
+            --purple-400: #a78bfa;
+            --pink-400: #f472b6;
+            --green-400: #4ade80;
+            --emerald-400: #34d399;
+        }
+
+        body {
+            @apply bg-black text-gray-300;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(96, 165, 250, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(96, 165, 250, 0.6); }
+        }
+
+        .animate-slide-in-up {
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        .animate-glow {
+            animation: glow 2s infinite;
+        }
+
+        /* Custom Components */
+        .kpl-card {
+            @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpl-card::before {
+            content: '';
+            @apply absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-20 blur;
+            z-index: -1;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to bottom, #fff, #e0f2fe, #bae6fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 w-full h-20 px-6 flex items-center justify-between backdrop-blur-xl bg-black/20 border-b border-white/5 z-50">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg animate-glow">
+                <i class="fas fa-gamepad text-white text-xl"></i>
+            </div>
+            <span class="text-2xl font-bold gradient-text">KPLauncher</span>
+        </div>
+        <nav class="flex gap-6">
+            <a href="#features" class="text-sm hover:text-white transition-all">Features</a>
+            <a href="#screenshots" class="text-sm hover:text-white transition-all">Screenshots</a>
+            <a href="#download" class="text-sm hover:text-white transition-all">Download</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-40 pb-20 px-6 relative">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-8xl font-bold gradient-text mb-8 animate-slide-in-up">
+                KPLauncher
+            </h1>
+            <p class="text-2xl text-gray-400 mb-12">
+                เชื่อมต่อกับทุกเซิฟเวอร์และม็อดของ SAMP ได้อย่างง่ายดายในโปรแกรมเดียว
+            </p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-blue-500 text-white px-8 py-4 rounded-2xl hover:bg-blue-600 transition-all">
+                    <i class="fas fa-download mr-2"></i>Download Free
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature Card 1 -->
+            <div class="kpl-card animate-slide-in-up">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-server text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">เชื่อมต่อทุกเซิฟเวอร์</h3>
+                <p class="text-gray-400">รองรับการเชื่อมต่อกับเซิฟเวอร์ SAMP ทุกประเภท</p>
+            </div>
+
+            <!-- Add more feature cards similarly -->
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

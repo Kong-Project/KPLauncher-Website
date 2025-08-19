@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPLauncher - The Ultimate SAMP Launcher</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lucide-static@0.299.0/font/lucide.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen bg-black relative overflow-hidden">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 z-0">
+        <!-- Static Orbs -->
+        <div class="absolute top-20 left-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute top-40 right-32 w-80 h-80 bg-cyan-400/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div class="absolute bottom-32 left-1/3 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div class="absolute bottom-20 right-20 w-64 h-64 bg-pink-500/15 rounded-full blur-3xl animate-pulse delay-3000"></div>
+
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-50 px-4 lg:px-6 h-20 flex items-center backdrop-blur-xl bg-black/20 border-b border-white/5 sticky top-0 animate-slide-in-up">
+        <div class="flex items-center space-x-3 animate-slide-in-left">
+            <div class="relative">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 transform hover:scale-110 transition-all duration-300 animate-glow">
+                    <i data-lucide="gamepad-2" class="w-6 h-6 text-white animate-rotate-slow"></i>
+                </div>
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent animate-text-glow">
+                    KPLauncher
+                </span>
+                <span class="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-300 border border-blue-400/30 backdrop-blur-sm animate-pulse px-2 py-1 rounded-full text-sm">
+                    v2.1.0
+                </span>
+            </div>
+        </div>
+        <nav class="ml-auto flex gap-6 animate-slide-in-right">
+            <a href="#features" class="text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 relative group animate-fade-in">Features</a>
+            <a href="#screenshots" class="text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 relative group animate-fade-in">Screenshots</a>
+            <a href="#specs" class="text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 relative group animate-fade-in">Specs</a>
+            <a href="#reviews" class="text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 relative group animate-fade-in">Reviews</a>
+            <a href="#download" class="text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 relative group animate-fade-in">Download</a>
+            <a href="#faq" class="text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 relative group animate-fade-in">FAQ</a>
+        </nav>
+    </header>
+
+    <main class="flex-1 relative z-10">
+        <!-- Hero Section -->
+        <section class="w-full py-20 md:py-32 lg:py-40 relative">
+            <div class="container px-4 md:px-6 mx-auto relative">
+                <div class="flex flex-col items-center space-y-8 text-center">
+                    <div class="space-y-6">
+                        <!-- Static Badges -->
+                        <div class="flex items-center justify-center gap-3 mb-8 animate-slide-in-up">
+                            <div class="group relative transform hover:scale-110 transition-all duration-500 hover:-translate-y-2 animate-scale-in">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                                <span class="relative bg-gradient-to-r from-green-400/20 to-emerald-400/20 text-white border border-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg flex items-center">
+                                    <i data-lucide="check-circle" class="w-3 h-3 mr-2 animate-pulse"></i>
+                                    เสถียร
+                                </span>
+                            </div>
+                            <div class="group relative transform hover:scale-110 transition-all duration-500 hover:-translate-y-2 animate-scale-in">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                                <span class="relative bg-gradient-to-r from-blue-400/20 to-cyan-400/20 text-white border border-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg flex items-center">
+                                    <i data-lucide="rocket" class="w-3 h-3 mr-2 animate-pulse"></i>
+                                    Next Gen
+                                </span>
+                            </div>
+                            <div class="group relative transform hover:scale-110 transition-all duration-500 hover:-translate-y-2 animate-scale-in">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                                <span class="relative bg-gradient-to-r from-yellow-400/20 to-orange-400/20 text-white border border-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg flex items-center">
+                                    <i data-lucide="award" class="w-3 h-3 mr-2 animate-pulse"></i>
+                                    #1 Choice
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Main Title -->
+                        <div class="relative animate-slide-in-up delay-300">
+                            <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight animate-text-glow">
+                                <span class="bg-gradient-to-b from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent drop-shadow-2xl">
+                                    KPLauncher
+                                </span>
+                            </h1>
+                            <div class="absolute inset-0 bg-gradient-to-b from-blue-400/20 to-cyan-400/20 blur-3xl -z-10 transform scale-110 animate-pulse"></div>
+                        </div>
+
+                        <div class="space-y-4 max-w-4xl animate-slide-in-up delay-500">
+                            <p class="text-xl md:text-2xl lg:text-3xl font-medium bg-gradient-to-r from-gray-200 via-white to-gray-200 bg-clip-text text-transparent">
+                                เชื่อมต่อกับทุกเซิฟเวอร์และม็อดของ SAMP ได้อย่างง่ายดายในโปรแกรมเดียว
+                            </p>
+                            <p class="text-lg md:text-xl text-gray-400 font-light">
+                                The ultimate SAMP launcher with advanced features, modern UI, and seamless server connectivity
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="w-full py-20 relative">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                    Features
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="server" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Server Management</h3>
+                        <p class="text-gray-400">จัดการเซิร์ฟเวอร์ได้ง่ายๆ ด้วยระบบจัดการเซิร์ฟเวอร์ที่ทันสมัย</p>
+                    </div>
+                    <div class="group p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="download" class="w-6 h-6 text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Auto Update</h3>
+                        <p class="text-gray-400">อัพเดทอัตโนมัติทั้งเกมและม็อด ไม่ต้องกังวลเรื่องเวอร์ชัน</p>
+                    </div>
+                    <div class="group p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="shield" class="w-6 h-6 text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Anti-Cheat</h3>
+                        <p class="text-gray-400">ระบบป้องกันการโกงที่ทันสมัยและมีประสิทธิภาพ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section id="screenshots" class="w-full py-20 relative">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                    Screenshots
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group relative overflow-hidden rounded-2xl">
+                        <img src="images/screenshot1.jpg" alt="Screenshot 1" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white">Modern UI Design</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl">
+                        <img src="images/screenshot2.jpg" alt="Screenshot 2" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white">Server Browser</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl">
+                        <img src="images/screenshot3.jpg" alt="Screenshot 3" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white">Mod Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs Section -->
+        <section id="specs" class="w-full py-20 relative">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                    System Requirements
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10">
+                        <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
+                            <i data-lucide="cpu" class="w-5 h-5 mr-2 text-blue-400"></i>
+                            Minimum Requirements
+                        </h3>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i>
+                                Windows 7 or later
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i>
+                                2GB RAM
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i>
+                                1GB Free Storage
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10">
+                        <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
+                            <i data-lucide="zap" class="w-5 h-5 mr-2 text-yellow-400"></i>
+                            Recommended
+                        </h3>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i>
+                                Windows 10 or later
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i>
+                                4GB RAM
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 mr-2 text-green-400"></i>
+                                2GB Free Storage
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="w-full py-20 relative">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                    User Reviews
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mr-4">
+                                <i data-lucide="user" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">John Doe</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">The best SAMP launcher I've ever used. Super fast and reliable!</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mr-4">
+                                <i data-lucide="user" class="w-6 h-6 text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Jane Smith</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">Love the modern design and easy server management!</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mr-4">
+                                <i data-lucide="user" class="w-6 h-6 text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Mike Johnson</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">The auto-update feature is a game-changer!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="w-full py-20 relative">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                    Download Now
+                </h2>
+                <div class="max-w-2xl mx-auto text-center">
+                    <p class="text-xl text-gray-400 mb-8">
+                        ดาวน์โหลด KPLauncher เวอร์ชันล่าสุดและเริ่มเล่น SAMP ได้ทันที
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
+                            <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                            Download v2.1.0
+                        </a>
+                        <a href="#" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-black/20 backdrop-blur-sm border border-white/10 text-white font-semibold hover:bg-black/30 transition-all duration-300 transform hover:scale-105">
+                            <i data-lucide="github" class="w-5 h-5 mr-2"></i>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="w-full py-20 relative">
+            <div class="container px-4 md:px-6 mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                    Frequently Asked Questions
+                </h2>
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <div class="p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10">
+                        <h3 class="text-xl font-semibold text-white mb-2">KPLauncher คืออะไร?</h3>
+                        <p class="text-gray-400">KPLauncher เป็นโปรแกรมที่ช่วยให้คุณสามารถเชื่อมต่อกับเซิร์ฟเวอร์ SAMP ได้อย่างง่ายดาย พร้อมฟีเจอร์ที่ทันสมัยและใช้งานง่าย</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10">
+                        <h3 class="text-xl font-semibold text-white mb-2">มีค่าใช้จ่ายหรือไม่?</h3>
+                        <p class="text-gray-400">KPLauncher เป็นโปรแกรมฟรี 100% ไม่มีค่าใช้จ่ายใดๆ ทั้งสิ้น</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10">
+                        <h3 class="text-xl font-semibold text-white mb-2">รองรับระบบปฏิบัติการอะไรบ้าง?</h3>
+                        <p class="text-gray-400">KPLauncher รองรับ Windows 7 และเวอร์ชันที่ใหม่กว่า</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-50 py-8 px-4 lg:px-6 border-t border-white/5">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="gamepad-2" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <span class="text-lg font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                        KPLauncher
+                    </span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 KPLauncher. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@0.299.0/dist/umd/lucide.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
